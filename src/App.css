@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#quote-box {
+  font-family: "Edu TAS Beginner", cursive;
+  font-size: 28px;
+  width: 30%;
+  background-color: black;
+  opacity: 0.75;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  padding: 30px;
+}
+#author {
+  font-family: "Dancing Script", cursive;
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin: 40px 0 20px 0;
+  text-align: right;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.bottom-left {
+  display: flex;
+}
+a {
+  text-decoration: none;
+}
+button {
+  position: relative;
+  outline: none;
+  margin-right: 5px;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+}
+
+button span {
+  color: #164ca7;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+button:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+
+button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+@media only screen and (max-width: 700px) {
+  #quote-box {
+    width: 80%;
+  }
+}
